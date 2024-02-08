@@ -5,7 +5,7 @@ pipeline {
         stage('Lint Checks') {
             steps {
                 script {
-                    sample.info(learndevopswithcloud)
+                    sample.info("learndevopswithcloud")
                 }
                 sh "echo Starting lintchecks"
                 sh "echo Installing JSlist"
@@ -16,7 +16,8 @@ pipeline {
         }
         stage('Generating the artifacts..') {
             steps {
-                sh "npm install"
+                //sh "npm install"
+                sh "echo npm"
             }
         }
     }
