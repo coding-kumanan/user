@@ -10,5 +10,10 @@ pipeline {
                 sh "lintchecks completed sucessfully"
             }
         }
+        stage('Generating the artifacts..')
+            steps{
+                sh "npm install"
+                sh "ls"
+            }
     }
 }
